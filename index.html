@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<head>
+  </head> 
 <body>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<!-- <link rel="stylesheet" href="style.css" > -->
@@ -9,6 +11,8 @@ Click the diary to start animating.
 View the project on Github : https://github.com/akzhy/Vara
 
 */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 html,
 body {
   height: 100%;
@@ -16,7 +20,7 @@ body {
 body {
   background: #fff4d3;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Pacifico", sans-serif !important;
   overflow: hidden;
   font-size: 16px;
 }
@@ -73,7 +77,7 @@ body {
   transform: rotateX(90deg);
 }
 .book.open {
-  transform: rotateX(35deg) rotateY(0deg) rotateZ(-35deg);
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(-20deg);
 }
 .book .paper,
 .book .shadow {
@@ -96,7 +100,7 @@ body {
 }
 .book .paper.open {
   box-shadow: 2.2em 1em 0px 0px #ccc3a9;
-  transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-160deg) rotateZ(0deg);
 }
 .book .paper .page.front {
   transition: transform 1s;
@@ -180,6 +184,9 @@ body {
 .book .open.third .back {
   transform: translateZ(-2px);
 }
+.book .open.fourth .back {
+  transform: translateZ(-3px);
+}
 .book .paper.first {
   z-index: 8;
 }
@@ -192,22 +199,34 @@ body {
 .book .paper.fourth {
   z-index: 5;
 }
+.book .paper .fifth {
+  z-index: 4;
+}
 .book .paper.first .front {
-  transform: translateZ(0.4px);
+  transform: translateZ(0.5px);
 }
 .book .paper.second .front {
-  transform: translateZ(0.3px);
+  transform: translateZ(0.4px);
 }
 .book .paper.third .front {
-  transform: translateZ(0.2px);
+  transform: translateZ(0.3px);
 }
 .book .paper.fourth .front {
+  transform: translateZ(0.2px);
+}
+.book .paper.fifth .front {
   transform: translateZ(0.1px);
 }
 .book .second-page #vara-container {
   width: 100%;
   height: 100%;
   padding: 1em;
+}
+.content {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 15%;
+
 }
 #link {
   position: absolute;
@@ -241,18 +260,49 @@ body {
     <div class="second paper">
       <div class="page front contents">
         <div id="vara-container"></div>
+        <p class = "content" >Tadaa, món quà anh nói anh sẽ tặng  em vào tối nay là đây nè, hmm, tuy nó chưa làm anh ưng ý cho lắm, vì cái thư viện anh đang dùng nó lại khum hỗ trợ tiếng việt :<  </p>
+        <p class = "content"> Nên là cái hiệu ứng chữ viết tay nó hơi fail mụt tí, nhưng mà khum sao, anh sẽ tìm cách sửa hihi :3</p>
       </div>
       <div class="page back"></div>
     </div>
     <div class="third paper">
       <div class="page front contents">
-        <div id="vara-container2"></div>
+        <div id="vara-container2">
+        </div>
+        <p class = "content" >Đây là một phần trong cái ý tưởng mà anh kể với em đó, có thể sau này cuốn sách này sẽ chứa cả nhật kí của anh và em trong
+          này luôn ý chứ, nếu em thấy ý tưởng này hay, thì hãy cùng anh thực hiện nhé, đây là bước đầu nè. 
+        </p>
       </div>
       <div class="page back"></div>
     </div>
     <div class="fourth paper">
-      <div class="page last front contents">
+      <div class="page front contents">
         <div id="vara-container3"></div>
+
+        <p class = "content" >Hmm, hay anh viết luôn một chiếc nhật kí vào đây nhỉ, nhưng đây chỉ là bản nháp để anh đưa em duyệt,
+          rất có thể sau này nó sẽ bị thất lạc ý chứ, nhưng mà chắc anh chẳng làm mất nổi đâu :> . 
+          Anh làm cái này từ chiều đến giờ, nhưng anh vẫn gất hóng chuyện giấc mơ của em đó nhăn, làm người ta tò mò quá đi à...
+          Mà mãi anh vẫn chưa thấy chỗ để viết nhật kí mới của anh ở đâu :<
+          
+        </p>
+
+      </div>
+      <div class="page back"></div>
+    </div>
+    <div class="fifth paper">
+      <div class="page last front contents">
+        <div id="vara-container4"></div>
+        <p class = "content" >
+          Cuốn sổ này anh làm tạm 4 trang, mà viết mụt xíu cái gần hết giấy mất ù :D,
+          nhưng mà sau này chắc số trang của nó sẽ là vô hạn nhó, em yên tâm, khum thiếu chỗ để viết :> </p>
+          <p class = "content" >Hong bíc em đang làm dì ó, chờ anh có lâu khum, nhận được quà thì nhắn cho anh liền nhó.</p>
+          
+          <p class = "content" > 
+          Em bảo hôm nay em ngủ sớm nên chắc em ngủ mất ù, Chúc bạn gái rượu của tớ ngủ ngon hihi</p>
+          <p class = "content" >
+          Kí tên: bạn trai gượu :3
+           
+        </p>
       </div>
       <div class="page back"></div>
     </div>
@@ -280,7 +330,7 @@ vara[0] = new Vara(
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
   [
     {
-      text: "15 Jan 2019  ",
+      text: "14 Aug 2023  ",
       textAlign: "right",
       y: 20,
       x: -30,
@@ -289,20 +339,20 @@ vara[0] = new Vara(
       fontSize: fontSize.small
     },
     {
-      text: "Start the year with something cool.",
+      text: "",
       y: 40,
       x: posX,
       duration: 4000
     },
     {
-      text: "Like with a library,",
+      text: "",
       id: "sphinx",
       x: posX,
       delay: 1000,
       duration: 4500
     },
     {
-      text: "..... that can animate text writing",
+      text: "",
       id: "end",
       color: "#3f51b5",
       delay: 1000,
@@ -321,7 +371,7 @@ vara[1] = new Vara(
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
   [
     {
-      text: "16 Jan 2019   ",
+      text: "14 Aug 2023   ",
       textAlign: "right",
       delay: 500,
       y: 20,
@@ -330,13 +380,13 @@ vara[1] = new Vara(
       fontSize: fontSize.small
     },
     {
-      text: "Try to create something else.",
+      text: "",
       y: 40,
       x: posX,
       duration: 4000
     },
     {
-      text: "Like a diary or a todo list.",
+      text: "",
       y: 40,
       x: posX,
       duration: 3500
@@ -353,7 +403,7 @@ vara[2] = new Vara(
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
   [
     {
-      text: "17 Jan 2019   ",
+      text: "14 Aug 2023   ",
       textAlign: "right",
       delay: 500,
       y: 20,
@@ -362,19 +412,19 @@ vara[2] = new Vara(
       fontSize: fontSize.small
     },
     {
-      text: "Creating a Diary.",
+      text: "",
       y: 40,
       x: posX,
       duration: 4000
     },
     {
-      text: "View the library on,",
+      text: "",
       y: 20,
       x: posX,
       duration: 3500
     },
     {
-      text: "Github.",
+      text: "",
       y: 10,
       color: "#3f51b5",
       id: "link",
@@ -388,7 +438,47 @@ vara[2] = new Vara(
     autoAnimation: false
   }
 );
-vara[2].ready(function() {
+vara[3] = new Vara(
+  "#vara-container4",
+  "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
+  [
+    {
+      text: "14 Aug 2023   ",
+      textAlign: "right",
+      delay: 500,
+      y: 20,
+      x: -30,
+      duration: 1500,
+      fontSize: fontSize.small
+    },
+    {
+      text: "",
+      y: 40,
+      x: posX,
+      duration: 4000
+    },
+    {
+      text: "",
+      y: 20,
+      x: posX,
+      duration: 3500
+    },
+    {
+      text: "",
+      y: 10,
+      color: "#3f51b5",
+      id: "link",
+      x: posX,
+      duration: 1500
+    }
+  ],
+  {
+    strokeWidth: 2,
+    fontSize: fontSize.medium,
+    autoAnimation: false
+  }
+);
+vara[3].ready(function() {
   $(".front:not(.last)").click(function() {
     var ix = $(this)
       .parent(".paper")
@@ -403,7 +493,7 @@ vara[2].ready(function() {
         played[ix] = 1;
         if (i == "link") {
           var group = o.container;
-          var rect = vara[2].createNode("rect", {
+          var rect = vara[3].createNode("rect", {
             x: 0,
             y: 0,
             width: o.container.getBoundingClientRect().width,
