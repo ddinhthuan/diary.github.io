@@ -3,156 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Document</title>
+    <title>Máy tính đơn giản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header> 
-        <div>
-            <div  class="logo" ><ion-icon name="logo-wordpress" style="font-size: 300%"></ion-icon> <p>Premium landing page template </p></div>
-        
-        </div>
-        
-        <div class="header-call">Callnow: 1-800-123-456</div>
-        <!-- Header content goes here -->
-    </header>
+    <div class="container mt-5">
+        <h1 class="text-left">Máy tính đơn giản</h1>
+        <div class="row">
 
-    <div class="section-2">
-        <div class="left-content">
-            <h2>The perfect way to convert your traffic into sales</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <div class="button-container-2">
-                <button class="purchase">Purchase now</button> or
-            <button class="taketour">Take a tour</button>
+            <div class="col-md-4">
+                
+                <div class="form-group">
+                    <label for="number1">Số thứ nhất</label>
+                    <input type="number" class="form-control" id="number1">
+                </div>
+                <div class="form-group">
+                    <label for="number2">Số thứ hai</label>
+                    <input type="number" class="form-control" id="number2">
+                </div>
+                <div class="form-group">
+                    <label for="notification">Thông báo</label>
+                    <input type="text" class="form-control" id="notification" readonly>
+                </div>
+                
             </div>
-
-        </div>
-        <div class="right-content-2">
-            <ion-icon class="arrow left-arrow" name="chevron-back-circle-outline"></ion-icon>
-            
-            <img src="a.jpg" alt="Mô tả ảnh">
-            <ion-icon class="arrow right-arrow" name="chevron-forward-circle-outline"></ion-icon>
            
-        </div>
-        </div>
-    </div>
-    
-        <!-- Section 2 content goes here -->
-    </div>
-
-    <div class="section-3">
-        <div class="column">
-            
-            <ion-icon name="desktop-outline" style="font-size: 70px;"></ion-icon>
-            <h3>Quick and easy</h3><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </div>
-        <div class="column">
-            <ion-icon name="cloud-done-outline" style="font-size: 70px "></ion-icon>
-            <h3>Less riskly</h3><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </div>
-        <div class="column">
-            <ion-icon name="speedometer-outline" style="font-size: 70px;"></ion-icon>
-            <h3>Optimized</h3><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </div>
-    </div>
-    
-
-    <div class="section-4">
-        <div class="left-content">
-            <h3>Check out the features</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </div>
-        <div class="right-content">
-            <div class="link-list">
-                <p class="link"><ion-icon name="chevron-forward-circle-outline"></ion-icon><a href="#">Lorem ipsum dolor sit amet</a></p>
-                <p class="link"><ion-icon name="chevron-forward-circle-outline"></ion-icon><a href="#">Lorem ipsum dolor sit amet</a></p>
-                <p class="link"><ion-icon name="chevron-forward-circle-outline"></ion-icon><a href="#">Lorem ipsum dolor sit amet</a></p>
-                <p class="link"><ion-icon name="chevron-forward-circle-outline"></ion-icon><a href="#">Lorem ipsum dolor sit amet</a></p>
+                
+           
+            <div class="col-md-4">
+                <label for="operation">Chọn phép tính</label>
+                <div id="operation">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operation" value="+">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Cộng (+)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operation" value="-">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Trừ (-)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operation" value="*">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Nhân (*)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operation" value="/">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Chia (/)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="result">Kết quả</label>
+                    <input type="text" class="form-control" id="result" readonly>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="calculateResult()">Tính</button>
             </div>
             
         </div>
     </div>
     
     
-    <div class="section-5">
-        <div><h3>The screenshot</h3></div>
-    
-    <div class="img">
-        <div class="image-column">
-            <img src="a.jpg" alt="Image 1">
-        </div>
-        <div class="image-column">
-            <img src="a.jpg" alt="Image 2">
-        </div>
-        <div class="image-column">
-            <img src="a.jpg" alt="Image 3">
-        </div>
-        <div class="image-column">
-            <img src="a.jpg" alt="Image 4">
-        </div>
-    </div>
-        
-       
-    </div>
-    
-    
-    <div class="section-6">
-        <div class="section-6a">
-        
-        
-            <div class="quote-box">
-                <h3>See what our customer are saying...</h3> 
-                <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-        </div>
-    
-        <div class="section-6b">
-            <div class="button-container">
-            <button class="purchase">Purchase now</button> or
-            <button class="taketour">Take a tour</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section-7">
-        <div class="section-7-content">
-            <div class="footer-column">
-                <h4>Payment Method</h4>
-                <ul class="payment-icons">
-                    <li><ion-icon name="logo-yen"></ion-icon></li>
-                    <li><ion-icon name="logo-paypal"></ion-icon></li>
-                    <!-- Thêm các biểu tượng thanh toán khác nếu cần -->
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Get in Touch</h4>
-                <p>Email: contact@example.com</p>
-                <p>Phone: +123456789</p>
-            </div>
-            <div class="footer-column">
-                <h4>Design Details</h4>
-                <p>Copyright &copy; 2023 Your Company</p>
-                <p>Designed by Your Name</p>
-            </div>
-            <div class="footer-column">
-                <ion-icon name="logo-wordpress" class="logo-footer"></ion-icon>
-            </div>
-        </div>
-    </div>
-    
-    
-    <footer>
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
-    </footer>
-    
- 
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
+    
+
